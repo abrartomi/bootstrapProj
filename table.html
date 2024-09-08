@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>NiceAdmin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            background-color:azure ;
+        }
+        .a li:hover {
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="fixed-top navbar navbar-expand-sm" >
+    <div class="container-fluid" style="width: 100%;height: 70px;background-color: white;margin-top: -10px">
+        <a class="navbar-brand" href="" style="text-align: right;font-size: 30px;color: darkblue;"><i class='fas fa-gem' style="font-size: 25px;padding: 5px"></i>Nice Admin</a>
+        <button  class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" onclick="openSide()">
+            <span class="navbar-toggler-icon" style="font-size: 20px"></span>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#search">
+            <span class="glyphicon">&#xe003;</span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="search"style="width: 100px;padding: 0px; z-index: 1;height: 50px;background-color: white;">
+            <form class="d-flex ">
+                <input class="form-control me-2" type="search" placeholder="Search"style="width: 300px" >
+        </div>
+        <div>
+            <div class="btn-group"><button  class="btn"  data-bs-toggle="dropdown" >
+                <i class="material-icons" style="font-size: 20px">&#xe7f4;</i><span class="badge bg-danger">3</span>
+            </button>
+                <ul class=" dropdown-menu dropdown-menu-left" >
+                    <li ><h5 style="font-size: 15 px;text-align: center" >You have 3 new notifications</h5></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <i style="font-size:25px;color: goldenrod;margin: 5px;" class="fa">&#xf071;</i>Lorem Ipsum<div style="margin-left: 20px;font-size: 12px;color: darkgray;width: 50px;"><p>Quae dolorem earum </p><p>veritatis oditseno 30 min.</p></div></a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <i style="font-size:25px;color: red;margin: 5px;" class='far'>&#xf057;</i>Atque rerum nesciunt<div style="margin-left: 20px;font-size: 12px;color: darkgray;width: 50px;"><p>Quae dolorem earum </p><p>veritatis oditseno 1 hr.</p></div></a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <i style="font-size:25px;color: seagreen;margin: 5px;" class="fa">&#xf058;</i>Sit rerum fuga<div style="margin-left: 20px;font-size: 12px;color: darkgray;width: 50px;"><p>Quae dolorem earum </p><p>veritatis oditseno 2 hr.</p></div></a></li>
+                    <li class="divider"></li>
+                    <li><h5 style="font-size: 15px;color: dimgrey;text-align: center;"><a href=""style="color: darkgray">Show all notification</a></h5></li>
+                </ul>
+            </div>
+            <div class="btn-group"><button class="btn "data-bs-toggle="dropdown" >
+                <i class="material-icons" style="font-size: 20px">&#xe8cd;</i><span class="badge bg-danger">3</span>
+            </button>
+                <ul class=" dropdown-menu dropdown-menu-left" >
+                    <li ><h5 style="font-size: 15 px;text-align: center" >You have 3 new messages</h5></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <img src="img/images.jpg" alt="Logo" style="width:40px;" class="rounded-pill">Maria Hudson</a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <img src="img/pngtree-cartoon-character-little-girl-charactercartoon-little-girlcartoon-png-image_661627.jpg" alt="Logo" style="width:40px;" class="rounded-pill">Anna Nelson</a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#">
+                        <img src="img/lovepik-cartoon-male-character-png-image_401154624_wh1200.png" alt="Logo" style="width:40px;" class="rounded-pill">David Muldon</a></li>
+                    <li class="divider"></li>
+                    <li><h5 style="font-size: 15px;color: dimgrey;text-align: center;"><a href=""style="color: darkgray">Show all messages</a></h5></li>
+                </ul>
+            </div>
+
+            <div class="btn-group"><button class="btn "data-bs-toggle="dropdown" style="margin-right: 50px;">
+                <img src="img/pngtree-professional-character-design-of-gentlemen-in-suits-png-image_4154884.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+            </button>
+                <ul class=" dropdown-menu dropdown-menu-left" >
+                    <li ><h5 style="font-size: 15 px;text-align: center" >Kevin Anderson</h5></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#"><i class="material-icons" style="font-size: 13px;margin-right:5px">&#xe7fd;</i>My Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#"><i class="material-icons" style="font-size: 13px;margin-right:5px">&#xe8b8;</i>Account Setting</a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#"><i  style="font-size: 13px;margin-right:5px"class='far'>&#xf059;</i>Need Help?</a></li>
+                    <li class="divider"></li>
+                    <li><a class="dropdown-item" style="font-size: 15px;text-align: left " href="#"><span  style="font-size: 13px;margin-right:5px"class="glyphicon">&#xe163;</span>Sign out</a></li>
+                </ul>
+            </div>
+
+        </div>
+</nav>
+<div id="sidenav" class="a" style="overflow-y: scroll;z-index: 2; width: 200px;height: 600px;background-color: white; display:none;position: fixed; margin-top: 0px;margin-left: -10px;">
+    <aside>
+        <ul>
+            <li class="nav-item"><a href="table.html" class="closeSide"><i class="material-icons" style="width:100%;color: dimgrey">&#xe5cd;</i></a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i class="material-icons" style="font-size: 15px; margin-right: 2px;margin-top: 20px">dashboard</i>Dashboard</a></li>
+            <li class="nav-item dropdown">
+                <div class="btn-group">
+                    <a class="nav-link dropdown-toggle"role="button"href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;" role="button" data-bs-toggle="dropdown"><i style='font-size:15px; margin-right: 5px;margin-top: 20px' class='fas'>&#xf0ca;</i>Components</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Alerts</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Accordion</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Badges</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Breadcrumbs</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Cards</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Carousel</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">List group</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Modal</a></li>
+                        <li><a class="dropdown-item" href="#"style="font-size: 15px;">Tabs</a></li>
+                    </ul>
+                </div></li>
+
+
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=""role="button"data-bs-toggle="dropdown" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;" role="button" data-bs-toggle="dropdown"><i style='font-size:15px; margin-right: 5px;margin-top: 20px' class='fab'>&#xf298;</i>Forms</a>
+                <ul class="dropdown-menu" style="z-index: 1">
+                    <li><a class="dropdown-item" href="form.html" style="font-size: 15px;">Form Elements</a></li>
+                    <li><a class="dropdown-item" href="form.html"style="font-size: 15px;">Form Layouts</a></li>
+                    <li><a class="dropdown-item" href="form.html"style="font-size: 15px;">Form Editors</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;" role="button" data-bs-toggle="dropdown"><i style='font-size:15px; margin-right: 5px;margin-top: 20px' class='fas'>&#xf0ce;</i>Tables</a>
+                <ul class="dropdown-menu" style="z-index: 1;">
+                    <li><a class="dropdown-item" href="table.html" style="font-size: 15px;">General Tables</a></li>
+                    <li><a class="dropdown-item" href="table.html"style="font-size: 15px;">Data Tables</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px;"class='far'>&#xf080;</i>Charts</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class='fas'>&#xf86d;</i>Icons</a></li>
+            <br><a style="margin-left: 20px;margin-bottom:50px;margin-top:50px;color: dimgrey"><b>PAGES</b></a><br>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class="material-icons">&#xe7fd;</i>Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class="material-icons">&#xe0d0;</i>Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class='fas'>&#xf788;</i>Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><span  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class="glyphicon">&#xe161;</span>Log in</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class='far'>&#xf059;</i>F.A.Q</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class="material-icons">&#xe001;</i>Error 404</a></li>
+            <li class="nav-item"><a class="nav-link" href="" style="width:200px;text-decoration:none;text-align: left;font-size: 18px;color: dimgrey;"><i  style="font-size: 15px; margin-right: 2px;margin-top: 20px"class='far'>&#xf15b;</i>Blank</a></li>
+        </ul>
+    </aside>
+</div>
+<div style="margin-top: 60px;margin-left: 10px; border: black solid 1p">
+    <p style="font-size: 25px;margin-bottom: 0px"><b>General Tables</b></p>
+    <a href="" style="color: darkgray;text-decoration: none;margin-top: 0px">Home / </a><a style="color: darkgray;">Forms / </a><a style="color: dimgrey">General</a>
+</div>
+<div style="width: 100%;padding: 10px;margin-top: 10px;">
+    <div class="col-sm-12 col-md-6" style="padding: 5px;height: 1700px;">
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Default Table</h1>
+            <table class="table"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Dark Table</h1>
+            <table class="table table-dark"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px">
+            <h1>Active Table</h1>
+            <table class="table"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td class="table-active">Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td class="table-active">2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="table-active">Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Tables without borders</h1>
+            <table class="table table-borderless"style="font-size: 15px;">
+                <thead>
+                <tr class="table-borderless">
+                    <th class="table-borderless">#</th>
+                    <th class="table-borderless">Name</th>
+                    <th class="table-borderless">Position</th>
+                    <th class="table-borderless">Age</th>
+                    <th class="table-borderless">Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table-borderless">
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 430px;margin-top: 10px">
+            <h1>Table Variants</h1>
+            <table class="table"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Default</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-primary">
+                    <td>Primary</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-secondary">
+                    <td>Secondary</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-success">
+                    <td>Success</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>Danger</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>Warning</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-info">
+                    <td>Info</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-light">
+                    <td>Light</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr class="table-dark">
+                    <td>Dark</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+<!--    /////////////////////////////////////-->
+    <div class="col-sm-12 col-md-6" style="padding: 10px;height: 1500px;">
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Table with stripped rows</h1>
+            <table class="table table-striped"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Table with hoverable rows</h1>
+            <table class="table table-hover"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 520px;margin-top: 10px;">
+            <h1>Bordered Table</h1>
+            <table class="table table-bordered"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered  border-primary"style="font-size: 15px;margin-top: 2px">
+                <thead>
+                <tr class="border border-primary">
+                    <th class="border border-primary">#</th>
+                    <th class="border border-primary">Name</th>
+                    <th class="border border-primary">Position</th>
+                    <th class="border border-primary">Age</th>
+                    <th class="border border-primary">Start Date</th>
+                </tr>
+                </thead>
+                <tbody >
+                <tr class="border border-primary">
+                    <td class="border border-primary">1</td>
+                    <td class="border border-primary">Brandon Jacob</td>
+                    <td class="border border-primary">Designer</td>
+                    <td class="border border-primary">28</td>
+                    <td class="border border-primary">2016-05-25</td>
+                </tr>
+                <tr class="border border-primary">
+                    <td class="border border-primary">2</td>
+                    <td class="border border-primary">Bridie Kessler</td>
+                    <td class="border border-primary">Developer</td>
+                    <td class="border border-primary">35</td>
+                    <td class="border border-primary">2014-12-05</td>
+                </tr>
+                <tr class="border border-primary">
+                    <td class="border border-primary">3</td>
+                    <td class="border border-primary">Ashleigh Langosh</td>
+                    <td class="border border-primary">Finance</td>
+                    <td class="border border-primary">45</td>
+                    <td class="border border-primary">2011-08-12</td>
+                </tr>
+                <tr class="border border-primary">
+                    <td class="border border-primary">4</td>
+                    <td class="border border-primary">Angus Grady</td>
+                    <td class="border border-primary">HR</td>
+                    <td class="border border-primary">34</td>
+                    <td class="border border-primary">2012-06-11</td>
+                </tr>
+                <tr class="border border-primary">
+                    <td class="border border-primary">5</td>
+                    <td class="border border-primary">Raheem Lehner</td>
+                    <td class="border border-primary">Dynamic Division Officer</td>
+                    <td class="border border-primary">47</td>
+                    <td class="border border-primary">2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container"style="background-color:white;width: 100%;border: solid 1px black;height: 300px;margin-top: 10px;">
+            <h1>Small tables</h1>
+            <table class="table table-sm"style="font-size: 15px;">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>28</td>
+                    <td>2016-05-25</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bridie Kessler</td>
+                    <td>Developer</td>
+                    <td>35</td>
+                    <td>2014-12-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td>45</td>
+                    <td>2011-08-12</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Angus Grady</td>
+                    <td>HR</td>
+                    <td>34</td>
+                    <td>2012-06-11</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
+<div  class=" col-md-12" style="width: 100% ;border-top: cadetblue 1px solid;left: 0;bottom: 0;right: 0;height: 100px;text-align: center;padding: 10px">
+    <footer>
+        <p style="font-size: 15px">© Copyright<a style="color: navy"><b> NiceAdmin</b></a>. All Rights Reserved</p>
+        <p style="font-size: 15px;">Designed by <a href="" style="color: darkblue">BootstrapMade</a></p>
+    </footer>
+</div>
+
+<script>
+    function openSide() {
+        document.getElementById("sidenav").style.display = "block";
+    }
+    function closeSide() {
+        document.getElementById("sidenav").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
